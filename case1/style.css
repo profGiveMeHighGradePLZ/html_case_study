@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f3f5f7;
+}
+.w {
+    margin: 0 auto;
+    width: 1200px;
+}
+a{
+    text-decoration: none;
+}
+.header {
+    margin: 30px auto;
+    height: 42px;
+}
+.logo {
+    float: left;
+    /* background-color: aqua; */
+    background-image: url(images/logo.png);
+    width: 195px;
+    height: 42px;
+}
+li {
+    list-style: none;
+}
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+.nav ul li{
+    float: left;
+    margin: 0 15px;
+}
+.nav ul li a {
+    display: block;
+    padding: 0 10px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+.nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+.search {
+    float: left;
+    border: 2px solid skyblue;
+    height: 42px;
+    width: 412px;
+    margin-left: 70px;
+}
+.search input {
+    float: left;
+    border: 1px solid skyblue;
+    border-right: 0;
+    padding-left: 15px;
+    width: 345px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #bfbfbf;
+}
+.search button {
+    float: right;
+    background-image: url(images/btn.png);
+    height: 42px;
+    width: 50px;
+    border: 0;
+}
+.banner {
+    height: 421px;
+    background-color: #1c036c;
+}
+.banner .w {
+    background-image: url(images/banner2.png);
+    height: 420px;
+}
+.banner .w .left {
+    float: left;
+    background-color: rgba(0, 0, 0, .3);
+    width: 190px;
+    height: 420px;
+}
+.banner .left ul li {
+    height: 45px;
+    line-height: 45px;
+    margin: 0 20px;
+   
+}
+.banner .left a {
+    font-size: 14px;
+    color: #fff;
+}
+.banner .left span {
+    float: right;
+}
+.banner .left a:hover {
+    color: #00a4ff;
+}
+.banner .right {
+    float: right;
+    margin-top: 50px;
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+}
+.banner .right h2 {
+    background-color: #9bceea;
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
