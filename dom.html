@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div.box {
+            margin: 20px auto;
+            padding: 100px 250px;
+            background-color: pink;
+            height: 420px;
+            width: 640px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>年会抽奖</h3>
+        <h1>一等奖：<span class="item" style="color: red;">1</span></h1>
+        <h2>二等奖：<span class="item">2</span></h2>
+        <h3>三等奖: <span class="item">3</span></h3>
+    </div>
+    <script>
+        const user = ['张三','李四','老王']
+        const item = document.querySelectorAll('.item')
+        console.log(item)
+        for(let i = 0;i<item.length;i++){
+            const rand = Math.floor(user.length*Math.random())
+            console.log(user[rand])
+            item[i].innerHTML = user.splice(rand,1)[0]
+        }
+        console.log(user)
+        Math.floor(10*Math.random())
+    </script>
+</body>
+</html>

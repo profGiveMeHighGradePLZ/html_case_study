@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            margin: 20px 30px;
+            height: 40px;
+            width: 250px;
+            /* background-color: #eee; */
+            border: 1px solid #eee;
+        }
+        input {
+            float: left;
+            margin-left: 20px;
+            border: none;
+            height: 40px;
+            width: 150px;
+            line-height: 40px;
+        }
+        input:focus {
+            outline: none
+        }
+        .btn {
+            float: left;
+            height: 40px;
+            width: 80px;
+            color: #008080;
+            border: none;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="短信验证码">
+        <button class="btn">获取验证码</button>
+    </div>
+    <script>
+        const input = document.querySelector('input')
+        const btn = input.nextElementSibling
+        btn.addEventListener('click',function(){
+            // console.log('click');
+            let time = 5
+            btn.innerHTML = `0${time}秒之后重新获取`
+            let timer = setInterval(function(){
+                btn.innerHTML = `0${--time}秒之后重新获取`
+                if(time === 0){
+                    clearInterval(timer)
+                    btn.innerHTML = '重新获取'
+                }
+            },1000)
+            
+        })
+        input.addEventListener
+    </script>
+</body>
+</html>

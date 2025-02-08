@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            background-color: #eee;
+            margin: 0 auto;
+            width: 500px;
+            height: 250px;
+        }
+        .box h1 {
+            padding-top: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .box h4 {
+            text-align: center;
+            padding: 50px 0;
+            font-size: 30px;
+        }
+        .box div {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            gap: 20px; /* 按钮之间的间距 */
+        }
+
+        .box button {
+            border: 1px black solid;
+            font-size: 14px;
+            padding: 5px 10px; /* 按钮的内边距 */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box">
+            <h1>随机点名</h1>
+            <h4>名字是:<span class="name" style="color: red;"></span></h4>
+            <div>
+                <button class="start">开始</button>
+                <button class="end" disabled>结束</button>
+            </div>
+            <script>
+                const arr = ['张三','李四','小明','小红','李华']
+                const start = document.querySelector('.start')
+                const end = document.querySelector('.end')
+                const name = document.querySelector('.name')
+                name.innerHTML = `${arr[0]}`
+
+                let n
+                start.addEventListener('click',function(){
+                    start.disabled = true
+                    end.disabled = false
+                    n = setInterval(function(){
+                        const rand = Math.floor(Math.random()*arr.length)
+                        name.innerHTML = `${arr[rand]}`
+                    },50)
+                })
+                
+                end.addEventListener('click', function () {
+                        start.disabled = false
+                        end.disabled = true
+                        clearInterval(n)
+                    })
+            </script>
+        </div>
+    </main>
+</body>
+</html>

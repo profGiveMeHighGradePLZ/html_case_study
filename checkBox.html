@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            .box {
+                margin: 40px auto;
+                width: 300px;
+                background-color: #eee;
+            } 
+
+            .box table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 300px;
+            }
+
+            .box table th {
+                padding: 7px 5px;
+                color: aliceblue;
+                background-color: blue;
+            }
+            
+            .box tbody td {
+                text-align: center;
+                border: 1px solid #c0c0c0;
+                padding: 10px 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <table>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkAll">全选</th>
+                        <th>商品</th>
+                        <th>商家</th>
+                        <th>价格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>小米手机</td>
+                        <td>小米</td>
+                        <td>1999¥</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>小米净水器</td>
+                        <td>小米</td>
+                        <td>4999¥</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>小米电视</td>
+                        <td>小米</td>
+                        <td>5999¥</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <script>
+            const checkAll = document.querySelector('.checkAll')
+            const checkbox = document.querySelectorAll('.checkbox')
+
+            checkAll.addEventListener('click',function(){
+                for(let i = 0;i<checkbox.length;i++){
+                    checkbox[i].checked = this.checked
+                }
+            })
+
+            for(let i = 0;i<checkbox.length;i++){
+                checkbox[i].addEventListener('click',function(){
+                    if (document.querySelectorAll('.checkbox:checked').length === checkbox.length){
+                        checkAll.checked = true
+                    }
+                    else {
+                        checkAll.checked = false
+                    }
+                })
+            }
+        </script>
+    </body>
+    </html>
+</body>
+</html>

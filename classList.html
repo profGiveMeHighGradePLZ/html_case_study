@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+        }
+        
+        .red {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .blue {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .green {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+        .large {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">
+    </div>
+    <script>
+        // const div = document.querySelector('div')
+        // div.className = 'blue'
+        // div.className = 'large blue'
+        const red = document.querySelector('.red')
+        // red.style.width = '400px'
+        // red.classList.add('large')
+        // red.classList.remove('large')
+        red.classList.toggle('large')
+        red.classList.toggle('large')
+        // red.classList.add('green')
+        // red.classList.add('blue')
+    </script>
+</body>
+</html>

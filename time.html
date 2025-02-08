@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            margin: 20px 30px;
+            background-color: #A52A2A;
+            width: 215px;
+            /* height: 300px; */
+            text-align: center;
+            color: white;
+        }
+
+        .box h4 {
+            height: 50px;
+            line-height: 50px;
+            /* margin-top: 40px; */
+            margin-bottom: 10px;
+        }
+        
+        .box h1 {
+            height: 50px;
+            line-height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .box .time {
+            margin-bottom: 70px;
+            font-size: 22px;
+        }
+
+        .box .time span {
+            display: inline-block;
+            width: 28px;
+            
+            background-color: black;
+        }
+
+        .box h3 {
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h4>今天是2024年2月22日</h4>
+        <h1>下班倒计时</h1>
+        <div class="time">
+            <span class="hour">23</span> :
+            <span class="minute">55</span> :
+            <span class="second">55</span>
+        </div>
+        <h3>00:00:00下课</h3>
+    </div>
+    <script>
+        const hour = document.querySelector('.hour')
+        const minute = document.querySelector('.minute')
+        const second = document.querySelector('.second')
+        const endTime = +new Date('2025-1-21 23:55:55')
+
+        setInterval(function(){
+            const now = +new Date()
+            const count = (endTime - now) / 1000
+            hour.innerHTML = parseInt(count/60/60%24) < 10 ? '0' + parseInt(count / 60 / 60 % 24) : parseInt(count / 60 / 60 % 24)
+            minute.innerHTML = parseInt(count/60%60) < 10 ? '0' + parseInt(count / 60 % 60) : parseInt(count / 60 % 60)
+            second.innerHTML = parseInt(count%60) < 10 ? '0' + parseInt(count % 60) : parseInt(count % 60)
+
+        },1000)
+    </script>
+</body>
+</html>

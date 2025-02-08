@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .Box {
+            width: 223px;
+            margin: 10px 30px;
+            position: relative;
+        }
+
+        .Box .searchBox {
+            width: 223px;
+            height: 48px;
+            padding: 0 10px;
+            font-size: 14px;
+            line-height: 48px;
+            border: 1px solid #e0e0e0;
+            outline: none;
+        }
+
+        .Box .search {
+            border: 1px solid #ff6700;
+        }
+
+        .Box .list {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 48px;
+            width: 223px;
+            border: 1px solid #ff6700;
+            border-top: 0;
+            background: #fff;
+        }
+
+        .Box .list a {
+            display: block;
+            padding: 6px 15px;
+            font-size: 12px;
+            color: #424242;
+            text-decoration: none;
+        }
+        .Box .list a:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="Box">
+        <input type="search" placeholder="小米笔记本" class="searchBox">
+        <ul class="list">
+            <li><a href="">全部商品</a></li>
+            <li><a href="">小米11</a></li>
+            <li><a href="">小米10</a></li>
+            <li><a href="">小米笔记本</a></li>
+            <li><a href="">黑鲨4</a></li>
+            <li><a href="">空调</a></li>
+        </ul>
+    </div>   
+    <script>
+        const searchBox = document.querySelector('.searchBox')
+        const list = document.querySelector('.list')
+
+        searchBox.addEventListener('focus',function(){
+            searchBox.classList.add('search')
+            list.style.display = 'block'
+        })
+
+        searchBox.addEventListener('blur',function(){
+            searchBox.classList.remove('search')
+            list.style.display = 'none'
+        })
+    </script> 
+</body>
+</html>
