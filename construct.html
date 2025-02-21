@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Pig(name,age){
+        //     this.name = name
+        //     this.age = age
+        // }
+        // const pig = new Pig('pp',6)
+        // console.log(pig);
+        
+        const o = {name:'bb',age:18}
+        console.log(Object.values(o));
+        console.log(Object.keys(o));
+        const oo = {}
+        Object.assign(oo,o)
+        Object.assign(oo,{gender:'man'})
+        console.log(oo);
+        
+        const arr = [1,2,3]
+        console.log(arr.reduce(prev,current => prev+current,5));
+        
+        
+    </script>
+</body>
+</html>

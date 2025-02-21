@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function star(uname){
+        //     this.uname = uname
+        // }
+        // star.prototype.sing = () => {
+        //     console.log('sing')           
+        // }
+        // new star().sing()
+        // console.log(Array);
+        
+        // Array.prototype.sum = function () {
+        //         return this.reduce((prev, item) => prev + item, 0);
+        //     }       
+        // console.log([1,1,1].sum());
+        
+
+        function star(uname){
+            this.uname = uname
+        }
+        console.log(star.prototype);
+        
+        star.prototype = {
+            constructor: star,
+            sing: function(){
+                console.log('sing'); 
+            },
+            dance: function(){
+                console.log('dance');   
+            }
+        }
+        console.log(star.prototype);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function sum(){
+        //     let sum = 0
+        //     for(let i = 0;i<arguments.length;i++){
+        //         sum+=arguments[i]
+        //     }
+        //     console.log(sum);
+        //     return sum
+        // }
+        // function sum(...arr) {
+        //         let sum = 0
+        //         for (let i = 0; i < arr.length; i++) {
+        //             sum += arr[i]
+        //         }
+        //         console.log(sum);
+        //         return sum
+        //     }
+        // sum(1,1,1,1,1,1)
+        // const fn = () => {
+        //     console.log(111);        
+        // }
+        // fn()
+        // const a = x => {
+        //     console.log(x);
+            
+        // }
+        // a(10)
+        // const d = x => x+x
+        // console.log(d(1));
+        const sum = (...arr) => {
+            let sum = 0;
+            for(let i = 0;i<arr.length;i++){
+                sum+=arr[i]
+            }
+            return sum
+        }
+        console.log(sum(1,1,1,1));
+        
+    </script>
+</body>
+</html>
